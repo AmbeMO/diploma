@@ -20,12 +20,15 @@ blink { text-decoration: none; }
 nobr { white-space: normal; }
 button{cursor:pointer; border:none;}
 body *{ box-sizing: border-box;outline:none;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif; overflow: hidden;
 }
 
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
+
+
 .active{
-  color: red;
+  color: #000000;
+  background-color: #54af2a;
 }

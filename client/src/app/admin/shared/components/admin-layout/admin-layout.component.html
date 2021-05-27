@@ -1,21 +1,27 @@
-<nav class="navbar">
-    <h1>
-        <a routerLink="/">Coolinary admin</a>
-    </h1>
 
-    <ul>
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin', 'dashboard']">Home</a>
-        </li>
-        <li routerLinkActive="active">
-            <a [routerLink]="['/admin', 'create']">Create</a>
-        </li>
-        <li >
-            <a href="#" (click)="logout($event)">Log out</a>
-        </li>
-    </ul>
-</nav>
+<div class="header">
+    <div class="container">
+        <nav class="header__row">
+            <h1>
+                <a routerLink="/">Coolinary admin</a>
+            </h1>
 
-<div class="container">
+            <div class="header__list">
+                <ul>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin', 'dashboard']">Home</a>
+                    </li>
+                    <li routerLinkActive="active">
+                        <a [routerLink]="['/admin', 'create']">Create</a>
+                    </li>
+                    <li >
+                        <a href="#" (click)="logout($event)">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="content">
     <router-outlet></router-outlet>
 </div>

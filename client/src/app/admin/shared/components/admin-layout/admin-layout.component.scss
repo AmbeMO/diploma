@@ -1,0 +1,32 @@
+.header{
+  height: 8vh;
+  background: #000000;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+
+.container{
+  max-width: 1260px;
+  margin: 0px auto;
+
+}
+.header__row{
+  //margin: 0 auto;
+  max-width: 1000px;
+  color: #54af2a;
+  display: flex;
+  justify-content: space-between;
+
+
+
+  .header__list{
+    ul{
+      display: flex;
+      li{
+        padding: 0px 20px;// переробити, по центру статік
+      }
+    }
+  }
+}
