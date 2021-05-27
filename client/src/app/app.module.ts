@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ReceipePageComponent } from './receipe-page/receipe-page.component';
+import { ReceipeComponent } from './shared/components/receipe/receipe.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { ReceipePageComponent } from './receipe-page/receipe-page.component';
     MainLayoutComponent,
     HomePageComponent,
     ReceipePageComponent,
+    ReceipeComponent,
   ],
   imports: [
     BrowserModule,
