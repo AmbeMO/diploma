@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { ReceipePageComponent } from './receipe-page/receipe-page.component';
-import { ReceipeComponent } from './shared/components/receipe/receipe.component';
+import { RecipePageComponent } from './recipe-page/recipe-page.component';
+import { RecipeComponent } from './shared/components/recipe/recipe.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {SharedModule} from "./shared/shared.module";
 
 
 @NgModule({
@@ -15,14 +16,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     AppComponent,
     MainLayoutComponent,
     HomePageComponent,
-    ReceipePageComponent,
-    ReceipeComponent,
+    RecipePageComponent,
+    RecipeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
