@@ -7,12 +7,12 @@ export interface User {
 export interface Recipe {
     title: string;
     description: string;
-    isVegeterian?: boolean;
-    isBeverage?: boolean;
+    is_vegeterian?: boolean;
+    is_beverage?: boolean;
     howToCook: string;
     userId?: string;
     ingridients: string;
-    imgLink?: string;
+    img_link?: string;
 
 
 }
