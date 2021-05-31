@@ -4,7 +4,7 @@ class RecipesController {
     async createRecipe(req, res) {
         const {title, description, isVegeterian, isBeverage, howToCook, ingridients, imgLink, userId} = req.body
         const newRecipe = await db.query(`
-             INSERT INTO "recipe" (title, description, is_vegeterian, is_beverage, how_to_cook,ingridients,img_link,date, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNINg *`,
+             INSERT INTO "recipe" (title, description, is_vegeterian, is_beverage, how_to_cook,ingridients,img_link, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNINg *`,
             [title, description, isVegeterian, isBeverage, howToCook,ingridients,imgLink,userId])
         res.json(newRecipe.rows[0])
     }

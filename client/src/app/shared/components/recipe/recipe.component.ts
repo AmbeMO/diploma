@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Recipe} from '../../interfaces';
 import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
@@ -12,6 +12,7 @@ import {environment} from '../../../../environments/environment';
 export class RecipeComponent implements OnInit {
 
   recipes: Recipe[] = [];
+
 
 
   constructor( private http: HttpClient) { }

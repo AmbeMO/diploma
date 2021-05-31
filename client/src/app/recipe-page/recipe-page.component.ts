@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {RecipeComponent} from '../shared/components/recipe/recipe.component';
+import {Recipe} from '../shared/interfaces';
+import {Subscription} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {switchMap} from "rxjs/operators";
 
 @Component({
   selector: 'app-receipe-page',
@@ -7,9 +12,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipePageComponent implements OnInit {
 
-  constructor() { }
+  constructor( ) { }
 
   ngOnInit() {
+
   }
 
 }
