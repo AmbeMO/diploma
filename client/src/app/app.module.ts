@@ -8,8 +8,9 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { RecipePageComponent } from './recipe-page/recipe-page.component';
 import { RecipeComponent } from './shared/components/recipe/recipe.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {SharedModule} from "./shared/shared.module";
-import {HttpClientModule} from "@angular/common/http";
+import {SharedModule} from './shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+import {SearchPipe} from './shared/search.pipe';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import {HttpClientModule} from "@angular/common/http";
     HomePageComponent,
     RecipePageComponent,
     RecipeComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

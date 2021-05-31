@@ -1,5 +1,10 @@
   <div class="cards">
-    <div class="card" *ngFor="let recipe of recipes">
+
+      <div class="card__search">
+          <input type="text" placeholder="Знайти рецепт..." [(ngModel)]="searchStr">
+      </div>
+
+    <div class="card" *ngFor="let recipe of recipes | searchPosts:searchStr">
         <div class="card__row">
             <div class="card-header">
                 <h2>{{recipe.title}}</h2>

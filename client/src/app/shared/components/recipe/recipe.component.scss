@@ -57,3 +57,22 @@
   justify-content: center;
   flex-direction: row;
 }
+.card__search{
+  margin: 5px;
+  box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+}
+
+input[type=text]{
+  border: none;
+  color: #526f12;
+  padding: 5px 0px 5px 35px;
+  background-color: #a4d4ef;
+  background-image:  url("../../../../assets/img/search.png") ;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: left;
+
+  &::placeholder{
+    color: #526f12;
+  }
+}

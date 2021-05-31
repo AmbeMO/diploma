@@ -13,6 +13,7 @@ export class RecipeComponent implements OnInit {
 
   recipes: Recipe[] = [];
 
+  searchStr = '';
 
 
   constructor( private http: HttpClient) { }
