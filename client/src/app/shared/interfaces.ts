@@ -4,6 +4,18 @@ export interface User {
     email: string;
     password: string;
 }
+export interface Recipe {
+    title: string;
+    description: string;
+    isVegeterian?: boolean;
+    isBeverage?: boolean;
+    howToCook: string;
+    userId?: string;
+    ingridients: string;
+    imgLink?: string;
+
+
+}
 // export interface Admin {
 //     email: string
 //     password: string

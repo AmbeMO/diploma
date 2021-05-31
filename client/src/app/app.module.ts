@@ -9,6 +9,7 @@ import { RecipePageComponent } from './recipe-page/recipe-page.component';
 import { RecipeComponent } from './shared/components/recipe/recipe.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from "./shared/shared.module";
+import {HttpClientModule} from "@angular/common/http";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {SharedModule} from "./shared/shared.module";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,18 @@
 .receipe{
+  margin: 10px;
+  border: 1px solid black;
+  background-color: #526f12;
+  color: #fef190;
+  padding: 20px;
+
+
   .header{
     display: flex;
     justify-content: space-between; //кнопку хом пейдж і тайтл в різні сторони
     align-items: center;
+    h1{
+      font-size: 1.5rem;
+    }
   }
 
   h1 {
@@ -10,6 +20,7 @@
   }
 
   .info{
+    padding: 10px 0px;
     strong{
       margin-right: 1rem;
 

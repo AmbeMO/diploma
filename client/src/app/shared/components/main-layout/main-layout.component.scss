@@ -1,9 +1,10 @@
 .header {
   height: 8vh;
-  background: #000000;
+  background: #cf3401;
   width: 100%;
   display: flex;
   align-items: center;
+
 
   .container {
     max-width: 1260px;
@@ -13,12 +14,17 @@
 
   .header__row {
     margin: 0 auto;
-    max-width: 1000px;
-    color: #54af2a;
+    max-width: 1200px;
+    color: #fef190;
     display: flex;
+    font-size: 1.2rem;
     align-items: center;
     justify-content: space-between;
 
-
   }
+}
+.content{
+  width: 100%;
+  min-height: 92vh;
+  background: #fef190 url("../../../../assets/img/rain2.png");
 }

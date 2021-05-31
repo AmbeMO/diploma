@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Recipe} from '../../interfaces';
+import {Subscription} from 'rxjs';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'app-receipe',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecipeComponent implements OnInit {
 
-  constructor() { }
+  recipes: Recipe[] = [];
+
+  constructor( private http: HttpClient) { }
 
   ngOnInit() {
+    this.http.get<Recipe[]>(`http://localhost:8080/recipe`)
+        .subscribe(recipes => {
+          console.log(' 1 response', recipes)
+          this.recipes = recipes
+        })
+
   }
 
 }
