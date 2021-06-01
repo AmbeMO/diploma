@@ -1,5 +1,5 @@
 <div class="cabinet__row">
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form" (ngSubmit)="submit()" class="send__recipe">
     <h1>Створіть власний рецепт</h1>
 
 
@@ -82,7 +82,7 @@
     <div [ngClass]="{invalid: form.get('video_link').touched && form.get('video_link').invalid}"
          class="form-control">
 
-        <label for="video_link">Вкажіть силку на video:</label>
+        <label for="video_link">Вкажіть силку на відео:</label>
         <input id="video_link" type="text" formControlName="video_link">
 
     </div>
@@ -90,14 +90,14 @@
     <div [ngClass]="{invalid: form.get('author_full_name').touched && form.get('author_full_name').invalid}"
          class="form-control">
 
-        <label for="author_full_name">Вкажіть full name:</label>
+        <label for="author_full_name">Вкажіть повне імя:</label>
         <input id="author_full_name" type="text" formControlName="author_full_name">
 
         <div
                 *ngIf="form.get('author_full_name').touched && form.get('author_full_name').invalid"
                 class="validation">
             <small *ngIf="form.get('author_full_name').errors.required">
-                Введіть поле фотографії
+                Введіть поле імя та фамілії
             </small>
         </div>
     </div>
@@ -107,4 +107,5 @@
 
 
 </form>
+    <button routerLink="/" class="btn">Назад</button>
 </div>
