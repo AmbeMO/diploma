@@ -3,7 +3,8 @@ import {RecipeComponent} from '../shared/components/recipe/recipe.component';
 import {Recipe} from '../shared/interfaces';
 import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
-import {switchMap} from "rxjs/operators";
+import {switchMap} from 'rxjs/operators';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-receipe-page',
@@ -12,7 +13,10 @@ import {switchMap} from "rxjs/operators";
 })
 export class RecipePageComponent implements OnInit {
 
-  constructor( ) { }
+  constructor(
+      private route: ActivatedRoute
+
+  ) { }
 
   ngOnInit() {
 

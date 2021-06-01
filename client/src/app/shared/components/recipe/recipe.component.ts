@@ -1,8 +1,9 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {Recipe} from '../../interfaces';
 import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../../environments/environment';
+import {RecipeService} from './recipe.service';
 
 @Component({
   selector: 'app-receipe',
@@ -26,5 +27,13 @@ export class RecipeComponent implements OnInit {
         })
 
   }
+
+
+
+    // @Input() recipe: Recipe
+
+
+
+
 
 }

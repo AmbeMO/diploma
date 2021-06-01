@@ -5,6 +5,7 @@ export interface User {
     password: string;
 }
 export interface Recipe {
+    id: string;
     title: string;
     description: string;
     is_vegeterian?: boolean;

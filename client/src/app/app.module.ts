@@ -11,6 +11,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {SharedModule} from './shared/shared.module';
 import {HttpClientModule} from '@angular/common/http';
 import {SearchPipe} from './shared/search.pipe';
+import { UserCreateComponent } from './user-create/user-create.component';
+import { CabinetComponent } from './cabinet/cabinet.component';
+// import { CreateUserComponent } from './user-login/create-user/create-user.component';
+
+
 
 
 @NgModule({
@@ -20,7 +25,10 @@ import {SearchPipe} from './shared/search.pipe';
     HomePageComponent,
     RecipePageComponent,
     RecipeComponent,
-    SearchPipe
+    SearchPipe,
+    UserCreateComponent,
+    CabinetComponent,
+    // CreateUserComponent,
   ],
   imports: [
     BrowserModule,
