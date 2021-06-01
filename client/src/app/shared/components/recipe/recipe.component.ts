@@ -3,7 +3,7 @@ import {Recipe} from '../../interfaces';
 import {Subscription} from 'rxjs';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../../environments/environment';
-import {RecipeService} from './recipe.service';
+import {RecipeService} from '../../recipe.service';
 
 @Component({
   selector: 'app-receipe',

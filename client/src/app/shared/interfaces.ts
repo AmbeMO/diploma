@@ -5,15 +5,21 @@ export interface User {
     password: string;
 }
 export interface Recipe {
-    id: string;
+    id?: string;
     title: string;
     description: string;
     is_vegeterian?: boolean;
     is_beverage?: boolean;
-    howToCook: string;
+    how_to_cook?: string;
+    howToCook?: string;
     userId?: string;
     ingridients: string;
     img_link?: string;
+    imgLink?: string;
+    video_link?: string;
+    videoLink?: string;
+    author_full_name?: string;
+    authorFullName?: string;
 
 
 }

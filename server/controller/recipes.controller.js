@@ -2,10 +2,10 @@ const db = require('../db');
 
 class RecipesController {
     async createRecipe(req, res) {
-        const {title, description, isVegeterian, isBeverage, howToCook, ingridients, imgLink, userId} = req.body
+        const {title, description, isVegeterian, isBeverage, howToCook, ingridients, imgLink, videoLink, authorFullName, userId} = req.body
         const newRecipe = await db.query(`
-             INSERT INTO "recipe" (title, description, is_vegeterian, is_beverage, how_to_cook,ingridients,img_link, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNINg *`,
-            [title, description, isVegeterian, isBeverage, howToCook,ingridients,imgLink,userId])
+             INSERT INTO "recipe" (title, description, is_vegeterian, is_beverage, how_to_cook, ingridients, img_link, video_link, author_full_name, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNINg *`,
+            [title, description, isVegeterian, isBeverage, howToCook,ingridients,imgLink, videoLink, authorFullName, userId])
         res.json(newRecipe.rows[0])
     }
     async getRecipeByUser(req, res) {

@@ -1,1 +1,108 @@
-<p>cabinet works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <h1>Створіть власний рецепт</h1>
+
+
+    <div [ngClass]="{invalid: form.get('title').touched && form.get('title').invalid}"
+         class="form-control"
+    >
+
+        <label for="title">Вкажіть назву:</label>
+        <input id="title" type="text" formControlName="title">
+
+        <div
+                *ngIf="form.get('title').touched && form.get('title').invalid"
+                class="validation">
+            <small *ngIf="form.get('title').errors.required">
+                Введіть поле Назви
+            </small>
+        </div>
+    </div>
+
+    <div [ngClass]="{invalid: form.get('description').touched && form.get('description').invalid}"
+         class="form-control">
+
+        <label for="description">Вкажіть короткий опис:</label>
+        <input id="description" type="text" formControlName="description">
+
+        <div
+                *ngIf="form.get('description').touched && form.get('description').invalid"
+                class="validation">
+            <small *ngIf="form.get('description').errors.required">
+                Введіть поле Oпис
+            </small>
+        </div>
+    </div>
+
+    <div [ngClass]="{invalid: form.get('ingridients').touched && form.get('ingridients').invalid}"
+         class="form-control">
+
+        <label for="ingridients">Вкажіть склад:</label>
+        <input id="ingridients" type="text" formControlName="ingridients">
+
+        <div
+                *ngIf="form.get('ingridients').touched && form.get('ingridients').invalid"
+                class="validation">
+            <small *ngIf="form.get('ingridients').errors.required">
+                Введіть поле склад
+            </small>
+        </div>
+    </div>
+
+    <div [ngClass]="{invalid: form.get('how_to_cook').touched && form.get('how_to_cook').invalid}"
+         class="form-control">
+
+        <label for="how_to_cook">Вкажіть як готовити:</label>
+        <input id="how_to_cook" type="text" formControlName="how_to_cook">
+
+        <div
+                *ngIf="form.get('how_to_cook').touched && form.get('how_to_cook').invalid"
+                class="validation">
+            <small *ngIf="form.get('how_to_cook').errors.required">
+                Введіть поле як готовити
+            </small>
+        </div>
+    </div>
+
+    <div [ngClass]="{invalid: form.get('img_link').touched && form.get('img_link').invalid}"
+         class="form-control">
+
+        <label for="img_link">Вкажіть силку на фотографію:</label>
+        <input id="img_link" type="text" formControlName="img_link">
+
+        <div
+                *ngIf="form.get('img_link').touched && form.get('img_link').invalid"
+                class="validation">
+            <small *ngIf="form.get('img_link').errors.required">
+                Введіть поле фотографії
+            </small>
+        </div>
+    </div>
+
+    <div [ngClass]="{invalid: form.get('video_link').touched && form.get('video_link').invalid}"
+         class="form-control">
+
+        <label for="video_link">Вкажіть силку на video:</label>
+        <input id="video_link" type="text" formControlName="video_link">
+
+    </div>
+
+    <div [ngClass]="{invalid: form.get('author_full_name').touched && form.get('author_full_name').invalid}"
+         class="form-control">
+
+        <label for="author_full_name">Вкажіть full name:</label>
+        <input id="author_full_name" type="text" formControlName="author_full_name">
+
+        <div
+                *ngIf="form.get('author_full_name').touched && form.get('author_full_name').invalid"
+                class="validation">
+            <small *ngIf="form.get('author_full_name').errors.required">
+                Введіть поле фотографії
+            </small>
+        </div>
+    </div>
+
+    <input type="submit" value="submit" [disabled]="form.invalid"
+    >
+
+
+</form>
