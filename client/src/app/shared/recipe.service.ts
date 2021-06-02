@@ -22,20 +22,29 @@ export class RecipeService {
                 return Object
                     .keys(response)
                     .map(key => ({
-                        ...response[key],
-                        id: key,
-                        // date: new Date(response[key].date)
+                        ...response[key]
                     }))
             }))
 
        }
 
     getById(id: string): Observable<Recipe> {
-        return this.http.get<Recipe>(`http://localhost:8080/recipe/${id}`)
+        return this.http.get(`http://localhost:8080/recipe/${id}`)
             .pipe(map((recipe: Recipe) => {
+                console.log(recipe)
                 return {
-                    ...recipe, id,
+                    ...recipe[0], id
                 }
             }))
     }
+
+    // getById(id: string): Observable<Post> {
+    //     return this.http.get<Post>(`${environment.fbDbUrl}/posts/${id}.json`)
+    //         .pipe(map((post: Post) => {
+    //             return {
+    //                 ...post, id,
+    //                 date: new Date(post.date)
+    //             }
+    //         }))
+    // }
 }

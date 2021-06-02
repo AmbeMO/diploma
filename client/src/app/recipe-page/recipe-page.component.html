@@ -2,23 +2,24 @@
     <div class="receipe">
         <div class="header">
             <h1>{{recipe.title}}</h1>
-
             <button routerLink="/" class="btn">Назад</button>
+        </div>
 
+        <div class="recipe__img">
+            <img src="{{recipe.img_link}}" alt="recipe img">
         </div>
 
         <div class="info">
-            <h1>///</h1>
-            <h1>{{recipe.title}}</h1>
-            <p>{{recipe.id}}</p>
-            <strong>{{recipe.howToCook}}</strong>
-            <small></small>
+            <p>Коротенький опис :{{recipe.description}}</p>
+            <small>Вегетеріанський : {{recipe.is_vegeterian}}</small>
         </div>
 
         <div>
-            <p>{{recipe.description}}</p>
-            <p>{{recipe.ingridients}}</p>
-            <p>{{recipe.title}}</p>
+
+            <p>Склад: {{recipe.ingridients}}</p>
+            <strong>Опис:{{recipe.how_to_cook}}</strong>
+
+
         </div>
     </div>
 </div>

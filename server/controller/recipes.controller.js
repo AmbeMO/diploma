@@ -16,6 +16,10 @@ class RecipesController {
     async getId( req, res ) {
         const id = req.params.id
         const recipe = await db.query(`SELECT * FROM "recipe" WHERE id = $1`, [id])
+        if(recipe.rowCount === 0){
+            res.sendStatus(404)
+        }
+        console.log(recipe)
         res.json(recipe.rows)
     }
     async getAllRecipes( req, res ) {
