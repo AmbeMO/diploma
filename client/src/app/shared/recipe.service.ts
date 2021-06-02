@@ -29,4 +29,13 @@ export class RecipeService {
             }))
 
        }
+
+    getById(id: string): Observable<Recipe> {
+        return this.http.get<Recipe>(`http://localhost:8080/recipe/${id}`)
+            .pipe(map((recipe: Recipe) => {
+                return {
+                    ...recipe, id,
+                }
+            }))
+    }
 }

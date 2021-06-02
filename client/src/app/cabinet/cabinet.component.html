@@ -1,4 +1,5 @@
 <div class="cabinet__row">
+
 <form [formGroup]="form" (ngSubmit)="submit()" class="send__recipe">
     <h1>Створіть власний рецепт</h1>
 
@@ -102,10 +103,9 @@
         </div>
     </div>
 
-    <input type="submit" value="Відправити" [disabled]="form.invalid"
-    >
+    <input type="submit" value="Відправити" [disabled]="form.invalid">
 
 
 </form>
-    <button routerLink="/" class="btn">Назад</button>
+    <button routerLink="/" class="btn">На Головну</button>
 </div>

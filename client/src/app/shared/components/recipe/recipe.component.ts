@@ -38,11 +38,11 @@ constructor(private recipeService: RecipeService) {
     })
 }
 
-ngOnDestroy() {
-    if (this.pSub) {
-        this.pSub.unsubscribe()
+    ngOnDestroy() {
+        if (this.pSub) {
+            this.pSub.unsubscribe()
+        }
     }
-}
 
     // @Input() recipe: Recipe
 

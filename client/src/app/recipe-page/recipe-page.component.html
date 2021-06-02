@@ -1,20 +1,24 @@
-<div class="receipe">
-    <div class="header">
-        <h1></h1>
+<div *ngIf="recipe$ | async as recipe">
+    <div class="receipe">
+        <div class="header">
+            <h1>{{recipe.title}}</h1>
 
-        <button routerLink="/" class="btn">Назад</button>
+            <button routerLink="/" class="btn">Назад</button>
 
-    </div>
+        </div>
 
-    <div class="info">
-        <strong>author</strong>
-        <small>27.05.2021</small>
-    </div>
+        <div class="info">
+            <h1>///</h1>
+            <h1>{{recipe.title}}</h1>
+            <p>{{recipe.id}}</p>
+            <strong>{{recipe.howToCook}}</strong>
+            <small></small>
+        </div>
 
-    <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, voluptatum.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, voluptatum.</p>
+        <div>
+            <p>{{recipe.description}}</p>
+            <p>{{recipe.ingridients}}</p>
+            <p>{{recipe.title}}</p>
+        </div>
     </div>
 </div>

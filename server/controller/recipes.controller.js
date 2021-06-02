@@ -13,6 +13,11 @@ class RecipesController {
         const recipes = await db.query(`SELECT * FROM "recipe" WHERE user_id = $1`, [id])
         res.json(recipes.rows)
     }
+    async getId( req, res ) {
+        const id = req.params.id
+        const recipe = await db.query(`SELECT * FROM "recipe" WHERE id = $1`, [id])
+        res.json(recipe.rows)
+    }
     async getAllRecipes( req, res ) {
         const recipes = await db.query(`SELECT * FROM "recipe"`)
         res.json(recipes.rows)
