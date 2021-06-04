@@ -1,3 +1,23 @@
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias cum debitis doloremque et illo libero maxime neque omnis reiciendis, sequi!</p>
-<button [routerLink]="['/login', 'cabinet']">Ввійти в кабінет</button>
-<button routerLink="/" class="btn">Назад</button>
+<div class="form">
+    <h1>Реєстрація</h1>
+    <div class="form-controll">
+        <label for="name">Імя</label>
+        <input type="text" id="name" [(ngModel)]="userName">
+
+        <label for="lastName">Фамілія</label>
+        <input type="text" id="lastName" [(ngModel)]="userLastName">
+
+        <label for="email">Імеїл</label>
+        <input type="email" id="email" [(ngModel)]="userMail">
+
+
+        <label for="password">Пароль</label>
+        <input type="password" id="password" [(ngModel)]="userPass">
+    </div>
+
+    <button (click)="send()" [routerLink]="['/login', 'cabinet']" class="btn">Зареєструватись</button>
+    <button routerLink="/" class="btn">Назад</button>
+
+</div>
+
+

@@ -4,14 +4,25 @@
   background-color: #526f12;
   color: #fef190;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 
-
+.recipe__img{
+  width: 100%;
+  img{
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  }
+}
   .header{
     display: flex;
     justify-content: space-between; //кнопку хом пейдж і тайтл в різні сторони
     align-items: center;
     h1{
       font-size: 1.5rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
     }
   }
 
@@ -26,4 +37,10 @@
 
     }
   }
+}
+p span {
+  font-weight: bold;
+}
+p {
+  padding: 10px 0px;
 }
