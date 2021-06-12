@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-      // const options = new RequestOptions({ headers: headers, withCredentials: true });
       console.log('start');
       // this.route.queryParams.subscribe( (params: Params) => {
       //     if (params['loginAgain']) {
