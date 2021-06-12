@@ -80,6 +80,7 @@ router.post('/login', (req, res, next) => {
                                     signed: true
                                 })
                                 res.json({
+                                    id: user.id,
                                     message: 'logged in'
                                 })
                             }else {

@@ -23,7 +23,7 @@ const routes: Routes = [
       {path: 'about', component: AboutComponent},
       {path : 'edit/:id', component: EditComponent},
       {path: 'dashboard', component: DasboardPageComponent},
-      {path: 'login/cabinet', component: CabinetComponent},
+      {path: `cabinet/:id`, component: CabinetComponent},
       {path: 'recipe/:id', component: RecipePageComponent}
     ]
   },

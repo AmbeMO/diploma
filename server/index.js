@@ -8,13 +8,14 @@ const recipeRouter = require('./routes/recipes.routes');
 const aboutRouter = require('./routes/about.routes');
 const adminRouter = require('./routes/admin.router');
 const auth = require('./auth/index');
+const user = require('./routes/user.routes')
 
 const PORT = process.env.PORT || 8080;
 
 const app = express();
 
 app.use(cors({
-    // origin: 'http://localhost:8080',
+    origin: 'http://localhost:4200',
     credentials: true
 }));
 // app.use(connect.cookieParser());
@@ -27,6 +28,7 @@ app.use('/', userRouter)
 app.use('/', recipeRouter)
 app.use('/', aboutRouter)
 app.use('/login', adminRouter)
+app.use('/user', user);
 
 
 //error handler

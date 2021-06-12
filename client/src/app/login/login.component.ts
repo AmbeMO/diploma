@@ -60,8 +60,8 @@ export class LoginComponent implements OnInit {
 
       this.login(user)
         .subscribe(result => {
-          console.log(result);
-          this.router.navigate(['cabinet']);
+          console.log(result.id);
+          this.router.navigate([`cabinet/:id=${result.id}`]); // ***
       });
       //
       // this.auth.login(user).subscribe(() => {
@@ -81,7 +81,9 @@ export class LoginComponent implements OnInit {
             withCredentials: true
         };
 
-        return this.http.post<User>('http://localhost:8080/auth/login', user);
+
+
+        return this.http.post<User>('http://localhost:8080/auth/login', user, requestOptions); // add requestOption
 
     }
 
