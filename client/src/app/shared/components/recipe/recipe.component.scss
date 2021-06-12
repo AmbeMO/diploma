@@ -1,16 +1,17 @@
 .card{
   display: flex;
   justify-content: space-between;
+
   //border: 1px solid black;
   padding: 10px;
-  margin: 20px 0px;
-  background-color: #526f12;
+  margin: 20px 10px;
+  background-color: #f5efef;
   box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
   font-family: Roboto;
-  max-width: 600px;
+  max-width: 500px;
   transition: 0.5s ease;
-  height: 200px;
-  color: #fef190;
+  height: 300px;
+  color: #050500;
   &:hover{
     transition: 0.5s ease;
     transform: scale(1.1);
@@ -50,29 +51,32 @@
   }
 }
 .cards {
-  margin: 0 auto;
+  //margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  width: 95%;
+  //width: 95%;
   justify-content: center;
   flex-direction: row;
+  //border: 10px solid black;
 }
 .card__search{
-  margin: 5px;
+  width: 100%;
+  background-color: #0ea1a1;
+  margin: 15px;
   box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
 }
 
 input[type=text]{
   border: none;
-  color: #526f12;
+  color: #ffffff;
   padding: 5px 0px 5px 35px;
-  background-color: #a4d4ef;
+  background-color: #0ea1a1;
   background-image:  url("../../../../assets/img/search.png") ;
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: left;
 
   &::placeholder{
-    color: #526f12;
+    color: #ffffff;
   }
 }

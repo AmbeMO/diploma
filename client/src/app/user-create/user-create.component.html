@@ -1,23 +1,63 @@
-<div class="form">
-    <h1>Реєстрація</h1>
-    <div class="form-controll">
-        <label for="name">Імя</label>
-        <input type="text" id="name" [(ngModel)]="userName">
+<div class="form-group">
+    <div class="form" [formGroup]="form" (ngSubmit)="send()">
+        <h1>Реєстрація</h1>
 
-        <label for="lastName">Фамілія</label>
-        <input type="text" id="lastName" [(ngModel)]="userLastName">
+        <hr>
 
-        <label for="email">Імеїл</label>
-        <input type="email" id="email" [(ngModel)]="userMail">
+        <div    [ngClass]="{invalid: form.get('name').touched && form.get('name').invalid}"
+                class="form-controll">
+            <input type="text" id="name" formControlName="name" placeholder="name...">
+            <div
+                    *ngIf="form.get('name').touched && form.get('name').invalid"
+                    class="validation">
+                <small *ngIf="form.get('name').errors.required">
+                    Введіть поле Ім'я
+                </small>
+            </div>
+        </div>
+        <div    [ngClass]="{invalid: form.get('lastName').touched && form.get('lastName').invalid}"
+                class="form-controll">
+            <input type="text" id="lastName" formControlName="lastName" placeholder="surname...">
+            <div
+                    *ngIf="form.get('lastName').touched && form.get('lastName').invalid"
+                    class="validation">
+                <small *ngIf="form.get('lastName').errors.required">
+                    Введіть поле фамілії
+                </small>
+            </div>
 
+        </div>
+        <div    [ngClass]="{invalid: form.get('email').touched && form.get('email').invalid}"
+                class="form-controll">
+            <input type="email" id="email" formControlName="email" placeholder="email...">
+            <div
+                    *ngIf="form.get('email').touched && form.get('email').invalid"
+                    class="validation">
+                <small *ngIf="form.get('email').errors.required">
+                    Введіть поле пошти
+                </small>
+                <small *ngIf="form.get('email').errors.email">
+                    Поле імеіл має бути імейлом
+                </small>
 
-        <label for="password">Пароль</label>
-        <input type="password" id="password" [(ngModel)]="userPass">
+            </div>
+
+        </div>
+        <div    [ngClass]="{invalid: form.get('password').touched && form.get('password').invalid}"
+                class="form-controll">
+            <input type="password" id="password" formControlName="password" placeholder="password...">
+            <div
+                    *ngIf="form.get('password').touched && form.get('password').invalid"
+                    class="validation">
+                <small *ngIf="form.get('password').errors.required">
+                    Введіть поле паролю
+                </small>
+            </div>
+
+        </div>
+
+        <button (click)="send()" [routerLink]="['/login', 'cabinet']" [disabled]="form.invalid" class="btn">Зареєструватись</button>
     </div>
 
-    <button (click)="send()" [routerLink]="['/login', 'cabinet']" class="btn">Зареєструватись</button>
     <button routerLink="/" class="btn">Назад</button>
-
 </div>
-
-

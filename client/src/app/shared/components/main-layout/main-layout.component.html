@@ -4,10 +4,16 @@
 
         <nav class="header__row">
           <ul>
-            <li>Кулінарна книга</li>
+            <li [routerLink]="['/']" >Кулінарна книга</li>
             <li>
-                <a [routerLink]="['/', 'login']">Увійти</a>
+                <a [routerLink]="['/', 'login']" routerLinkActive="active">Вхід</a>
             </li>
+              <li>
+                  <a [routerLink]="['/', 'registration']" routerLinkActive="active">Зареєструватись</a>
+              </li>
+              <li>
+                  <a [routerLink]="['/', 'about']" routerLinkActive="active"> Про нас</a>
+              </li>
           </ul>
         </nav>
 

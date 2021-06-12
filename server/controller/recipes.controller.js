@@ -1,4 +1,4 @@
-const db = require('../db');
+const db = require('../db/db');
 
 class RecipesController {
     async createRecipe(req, res) {
@@ -19,13 +19,20 @@ class RecipesController {
         if(recipe.rowCount === 0){
             res.sendStatus(404)
         }
-        console.log(recipe)
         res.json(recipe.rows)
     }
     async getAllRecipes( req, res ) {
         const recipes = await db.query(`SELECT * FROM "recipe"`)
         res.json(recipes.rows)
 
+    }
+    async updateRecipe( req, res ) {
+        const {id, title, description, howToCook, ingridients, authorFullName} = req.body
+        const recipe = await db.query(`
+        UPDATE "recipe" SET title = $1, description = $2, how_to_cook = $3, ingridients = $4, author_full_name = $5 WHERE id = $6 RETURNING *`,
+            [title, description, howToCook, ingridients, authorFullName, id])
+        res.json(recipe.rows[0])
+        console.log('qwe', recipe)
     }
     async deleteRecipe( req, res ) {
         const id = req.params.id

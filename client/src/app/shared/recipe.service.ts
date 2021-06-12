@@ -10,12 +10,9 @@ export class RecipeService {
 
     constructor(private http: HttpClient) {
     }
-    
     create(recipe: Recipe): Observable<Recipe> {
         return this.http.post<Recipe>('http://localhost:8080/recipe', recipe)
     }
-    
-
        getAll(): Observable<Recipe[]> {
         return this.http.get(`http://localhost:8080/recipe`)
             .pipe(map((response: {[key: string]: any}) => {
@@ -23,20 +20,29 @@ export class RecipeService {
                     .keys(response)
                     .map(key => ({
                         ...response[key]
-                    }))
-            }))
+                    }));
+            }));
 
        }
 
     getById(id: string): Observable<Recipe> {
         return this.http.get(`http://localhost:8080/recipe/${id}`)
             .pipe(map((recipe: Recipe) => {
-                console.log(recipe)
+                console.log(recipe);
                 return {
                     ...recipe[0], id
-                }
-            }))
+                };
+            }));
     }
+
+    remove(id: string): Observable<void> {
+        return this.http.delete<void>(`http://localhost:8080/recipe/${id}`);
+    }
+   completeRecipe(id: number): Observable<Recipe> {
+       return this.http.put<Recipe>(`http://localhost:8080/recipe/${id}`, {
+            completed: true
+        })
+   }
 
     // getById(id: string): Observable<Post> {
     //     return this.http.get<Post>(`${environment.fbDbUrl}/posts/${id}.json`)

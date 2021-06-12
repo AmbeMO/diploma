@@ -1,8 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {SafePipe} from './shared/safePipe.service';
-
 import { AppRoutingModule } from './app-routing.module';
+
+
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './shared/components/main-layout/main-layout.component';
 import { HomePageComponent } from './home-page/home-page.component';
@@ -18,11 +19,13 @@ import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 
 import {SearchPipe} from './shared/search.pipe';
+import { AboutComponent } from './about/about.component';
+import { AdminComponent } from './admin/admin.component';
+import {LoginComponent} from './login/login.component';
+import {DasboardPageComponent} from './dasboard-page/dasboard-page.component';
+import { EditComponent } from './edit/edit.component';
 
-
-
-
-
+// import { LoginPage} from './login-page/login-page.component';
 
 
 @NgModule({
@@ -35,7 +38,12 @@ import {SearchPipe} from './shared/search.pipe';
     SearchPipe,
     UserCreateComponent,
     CabinetComponent,
-    SafePipe
+    SafePipe,
+    AboutComponent,
+    AdminComponent,
+    LoginComponent,
+    DasboardPageComponent,
+    EditComponent
     // CreateUserComponent,
   ],
   imports: [

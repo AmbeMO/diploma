@@ -15,16 +15,15 @@
             <p><span>Опис : </span>{{recipe.how_to_cook}}</p>
         </div>
 
+        <div class="recipe__link">
+            <div class="recipe__img">
+                <img src="{{recipe.img_link}}" alt="recipe img">
+            </div>
 
-        <div class="recipe__img">
-            <img src="{{recipe.img_link}}" alt="recipe img">
-        </div>
-
-        <div class="card__video">
-            <iframe [src]="cleanURL(recipe.video_link)"  width="560" height="315" frameborder="0" allowfullscreen>
-
-            </iframe>
-
+            <div class="card__video">
+                <iframe [src]="cleanURL(recipe.video_link)" frameborder="0" allowfullscreen>
+                </iframe>
+            </div>
         </div>
     </div>
 </div>

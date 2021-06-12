@@ -1,0 +1,22 @@
+
+<div class="content">
+    <p>Дякую всім за відвідування. Цей проект являється моєю дипломною і мені хотілось би отримати відгук</p>
+    <form>
+        <h1>Ваші побажання</h1>
+        <textarea id="advice" name="advice"  cols="30" rows="10" [(ngModel)]="aboutText">...</textarea>
+        <button (click)="send()" class="btn">Відправити</button>
+    </form>
+</div>
+
+
+
+<h1>
+    останні поради
+</h1>
+
+<div class="advices">
+    <div class="card" *ngFor="let advice of advices">
+        <p>{{advice.text}}</p>
+    </div>
+</div>
+<button routerLink="/" class="btn">На Головну</button>

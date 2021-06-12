@@ -7,12 +7,12 @@ import {Recipe} from './interfaces';
 export class SearchPipe implements PipeTransform {
     transform(recipes: Recipe[], search= ''): Recipe[] {
        if (!search.trim()) {
-           return recipes
+           return recipes;
        }
 
-          return recipes.filter( recipe => {
+       return recipes.filter( recipe => {
               return recipe.title.toLowerCase().includes(search.toLowerCase())
-          })
+          });
        }
     }
 

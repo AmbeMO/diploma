@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Recipe} from '../shared/interfaces';
-import {RecipeService} from "../shared/recipe.service";
+import {RecipeService} from '../shared/recipe.service';
 
 @Component({
   selector: 'app-cabinet',
@@ -41,7 +41,7 @@ export class CabinetComponent implements OnInit {
     };
 
     this.recipeService.create(recipe).subscribe(() => {
-      this.form.reset()
+      this.form.reset();
 
     })
   }

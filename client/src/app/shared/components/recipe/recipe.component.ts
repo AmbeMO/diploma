@@ -13,7 +13,7 @@ import {RecipeService} from '../../recipe.service';
 export class RecipeComponent implements OnInit , OnDestroy {
 
   recipes: Recipe[] = [];
-  pSub: Subscription
+  pSub: Subscription;
 
   searchStr = '';
 
@@ -34,10 +34,12 @@ constructor(private recipeService: RecipeService) {
 
     ngOnInit() {
     this.pSub = this.recipeService.getAll().subscribe(recipes => {
-        this.recipes = recipes
-    })
+        this.recipes = recipes;
+    });
 }
+    remove(id: string) {
 
+    }
     ngOnDestroy() {
         if (this.pSub) {
             this.pSub.unsubscribe()

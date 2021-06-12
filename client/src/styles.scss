@@ -12,7 +12,7 @@ q { quotes: "" ""; }
 ul, ol, dir, menu { list-style: none; }
 sub, sup { vertical-align: baseline; }
 a { color: inherit; }
-hr { display: none; } /* we don't need a visual hr in layout */
+ /* we don't need a visual hr in layout */
 /* disables some nasty font attributes in standard browsers */
 font { color: inherit !important; font: inherit !important; color: inherit !important; }
 marquee { overflow: inherit !important; -moz-binding: none; }
@@ -26,25 +26,33 @@ body *{ box-sizing: border-box;outline:none;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap');
 
-
+hr{
+  width: 100%;
+  size: 1px;
+  color: black;
+  margin: 10px 0px;
+}
 
 .active{
-  color: #000000;
-  background-color: #54af2a;
+  color: #ffffff;
+  background-color: #e07833;
+  border-radius: 5px;
 }
 
 
 .btn{
-  margin: 0 auto;
+  //margin: 0 auto;
   max-width: 200px;
-  background-color: #cf3401;
-  padding: 2px;
-  color: #fef190;
+  background-color: #0ea1a1;
+  padding: 10px;
+  color: #ffffff;
   transition: 0.5s ease;
+  border-radius: 30px;
+  margin: 15px;
 
   &:hover{
-    background-color: #fef190;
-    color: #cf3401;
+    background-color: #e07833;
+    color: #ffffff;
     transition: 0.5s ease;
 
   }

@@ -1,20 +1,13 @@
 .receipe{
   margin: 10px;
   border: 1px solid black;
-  background-color: #526f12;
-  color: #fef190;
+  background-color: #f5efef;
+  color: #000000;
   padding: 20px;
   display: flex;
   flex-direction: column;
 
-.recipe__img{
-  width: 100%;
-  img{
-    width: 100%;
-    object-fit: cover;
-    box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
-  }
-}
+
   .header{
     display: flex;
     justify-content: space-between; //кнопку хом пейдж і тайтл в різні сторони
@@ -43,4 +36,37 @@ p span {
 }
 p {
   padding: 10px 0px;
+}
+.recipe__link{
+  max-height: 500px;
+  padding: 10px 0px;
+  //flex-wrap: wrap;
+  //width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__video{
+  height: 100%;
+  width: 100%;
+  //box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  iframe{
+    object-fit: cover;
+    //box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+    border: 3px solid #cf3401;
+  }
+  &:hover{
+    //transform: scale(1.1);
+    transition: 1s ease;
+  }
+}
+.recipe__img{
+  height: 100%;
+  width: 100%;
+  img{
+    width: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  }
 }

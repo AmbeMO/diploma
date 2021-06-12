@@ -1,0 +1,15 @@
+<div class="block__row">
+    <div class="card" *ngFor="let recipe of recipes">
+        <div class="card__row">
+            <div class="card-header">
+                <h2>{{recipe.title}}</h2>
+                <p>{{recipe.id}}</p>
+
+            </div>
+            <button (click)="remove(recipe.id)" class="btn">Видалити</button>
+            <button [routerLink]="['/edit', recipe.id]" class="btn">редагувати</button>
+        </div>
+    </div>
+    <p>creating</p>
+</div>
+<button [routerLink]="['/login']" class="btn">Назад</button>

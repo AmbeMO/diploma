@@ -3,9 +3,11 @@ export interface User {
     lastName?: string;
     email: string;
     password: string;
+    returnSecureToken?: boolean;
 }
 export interface Recipe {
-    id?: string;
+    completed?: boolean;
+    id?: number;
     title: string;
     description: string;
     is_vegeterian?: boolean;
@@ -20,8 +22,19 @@ export interface Recipe {
     videoLink?: string;
     author_full_name?: string;
     authorFullName?: string;
+}
+export interface Advice {
+    id?: string;
+    text: string;
+}
 
+export interface dbAuthResponse {
+    token: string;
+    expiresIn: string;
+}
 
+export interface DbCreateResponse {
+    name: string;
 }
 // export interface Admin {
 //     email: string

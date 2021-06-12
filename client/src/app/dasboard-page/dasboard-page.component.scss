@@ -1,0 +1,14 @@
+.block__row{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .card{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  }
+}
+

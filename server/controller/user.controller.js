@@ -1,11 +1,22 @@
-const db = require('../db');
+const db = require('../db/db');
+const bcrypt = require ('bcrypt');
+const jwt = require ('jsonwebtoken');
+require ("dotenv").config();
+
+const generateJwt = (email, password) => {
+    return jwt.sign({ email, password }, "process.env.SECRET_KEY", { expiresIn: '2h' })
+}
 
 class UserController {
+
     async createUser(req, res) {
         const {name, lastName, email, password} = req.body
+        const hash = bcrypt.hashSync(password, 8)
+
         const newPerson = await db.query(`
              INSERT INTO "user" (name, last_name, email, password) VALUES ($1, $2, $3, $4) RETURNINg *`,
-            [name, lastName, email, password])
+            [name, lastName, email, hash])
+
         res.json(newPerson.rows[0])
     }
     async getUsers( req, res ) {

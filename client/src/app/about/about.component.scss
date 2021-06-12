@@ -1,0 +1,40 @@
+.content{
+  background-color: #f5efef;
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  color: #000000;
+  box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  form{
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+h1{
+  font-size: 2rem;
+  text-align: center;
+  margin: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #000000;
+}
+.card{
+  background-color: #0ea1a1;
+  padding: 10px;
+  color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px 0 rgba(99, 98, 98, 0.2), 0 6px 20px 0 rgba(9, 9, 9, 0.19);
+  p{
+    margin: 10px;
+  }
+}
+textarea{
+  margin-bottom: 10px;
+  border: none;
+
+}
